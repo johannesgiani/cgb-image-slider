@@ -9,7 +9,15 @@ Below you will find some information on how to run scripts.
 ## Requirements
 * Wordpress 5+
 * jQuery (only used to polyfill `document.ready`)
-* Fontsawesome Free to resolve the default button classes
+* Fontsawesome Free (to resolve the default button classes)
 
 ## Known Issues
 * Block editing in german language only
+
+## Backlog
+* Make more things configurable
+    * height of slider/images
+* Create script to bundle the plugin
+* i18n
+* Move some configuration to a sidebar
+* Get rid of jQuery

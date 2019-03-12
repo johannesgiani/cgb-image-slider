@@ -13,7 +13,6 @@
 
     a {
       min-width: 100%;
-      background: black;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -21,7 +20,7 @@
     }
   
     img {
-      max-height: 20rem;
+      max-height: 20rem; /* make configurable  */
       width: 100%;
       object-fit: contain;
     }
@@ -30,9 +29,5 @@
   .wp-block-cgb-block-image-slider__controls {
     display: flex;
     justify-content: center;
-
-    button {
-      border: none;
-    }
   }
 }
