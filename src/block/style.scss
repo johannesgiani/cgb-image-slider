@@ -1,0 +1,38 @@
+/**
+ * #.# Styles
+ *
+ * CSS for both Frontend+Backend.
+ */
+.wp-block-cgb-block-image-slider  {
+
+  .wp-block-cgb-block-image-slider__images {
+    display: flex;
+    width: 100%;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+
+    a {
+      min-width: 100%;
+      background: black;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      scroll-snap-align: start;
+    }
+  
+    img {
+      max-height: 20rem;
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+
+  .wp-block-cgb-block-image-slider__controls {
+    display: flex;
+    justify-content: center;
+
+    button {
+      border: none;
+    }
+  }
+}
