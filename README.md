@@ -29,8 +29,6 @@ Below you will find some information on how to run scripts.
 * Block editing in german language only
 
 ## Backlog
-* Make more things configurable
-    * height of slider/images
 * a11y
 * i18n for block editing
 * Move configuration to a sidebar
