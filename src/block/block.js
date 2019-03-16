@@ -11,6 +11,7 @@ const { registerBlockType } = wp.blocks;
 const { MediaUpload, MediaUploadCheck } = wp.editor;
 const { Button, TextControl } = wp.components;
 import ImageSlider from './ImageSlider';
+import ImageSliderProperties from './ImageSliderProperties';
 
 /**
  * Register: aa Gutenberg Block.
@@ -42,6 +43,10 @@ registerBlockType( 'cgb/block-image-slider', {
 			type: 'string',
 			default: 'fas fa-arrow-right' 
 		},
+		imageStyles: {
+			type: 'string',
+			default: 'max-height: 30rem;' 
+		},
 	},
 
 	edit: function( props ) {
@@ -59,10 +64,6 @@ registerBlockType( 'cgb/block-image-slider', {
 			<div className={ props.className }>
 				<div className="wp-block-cgb-block-image-slider__selected-images">
 					<strong>Preview</strong>
-					<p>
-						{ props.attributes.media.length 
-						} Bilder ausgewählt
-					</p>
 					<p>
 						{
 							props.attributes.media.map((media) =>
@@ -97,18 +98,32 @@ registerBlockType( 'cgb/block-image-slider', {
 						value={ props.attributes.buttonRightClass }
 						onChange={ ( buttonRightClass ) => props.setAttributes( { buttonRightClass } ) }
 					/>
+					<TextControl
+						label="Bild Style-Attribute"
+						value={ props.attributes.imageStyles }
+						onChange={ ( imageStyles ) => props.setAttributes( { imageStyles } ) }
+					/>
 				</div>
 			</div>
 		);
 	},
 
 	save: function( props ) {
+		const imageUrls = [];
+		props.attributes.media.map((media) => {
+			imageUrls.push(media.url);
+		});
+
+		const imageSliderProperties = new ImageSliderProperties(
+			imageUrls,
+			props.attributes.imageStyles,
+			props.attributes.buttonLeftClass, 
+			props.attributes.buttonRightClass);
+
 		return (
 			<ImageSlider
 				className={ props.className }
-				medias={ props.attributes.media }
-				buttonLeftClass={ props.attributes.buttonLeftClass }
-				buttonRightClass={ props.attributes.buttonRightClass }
+				imageSliderProperties={ imageSliderProperties }
 			/>
 		);
 	},

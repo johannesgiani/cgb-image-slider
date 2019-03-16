@@ -1,8 +1,9 @@
-export default function ImageSlider( { medias, className, buttonLeftClass, buttonRightClass } ) {
 
-    const images = medias.map((media) => {
-        return 	<a href={ media.url }>
-                    <img src={ media.url }/>
+export default function ImageSlider( { className, imageSliderProperties } ) {
+    const { buttonLeftClass, buttonRightClass, imageStyles, imageUrls } = imageSliderProperties;
+    const images = imageUrls.map((url) => {
+        return 	<a href={ url }>
+                    <img src={ url } style={ imageStyles }/>
                 </a>
         }
     );
