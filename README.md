@@ -10,6 +10,20 @@ Below you will find some information on how to run scripts.
 * Wordpress 5+
 * jQuery (only used to polyfill `document.ready`)
 * Fontsawesome Free (to resolve the default button classes)
+* tar (to create the plugin archive)
+* docker (for development)
+
+## Setup in Wordpress
+* Use bunde script to bundle the plugin `./bundle.sh`
+* Extract in `wp-content/plugins` 
+
+## Development
+* Run development task with watch
+    * `npm run start`
+* Start wordpress & mysql via docker
+    * `docker-compose up -d`
+    *  Create `wp-content/uploads` inside wordpress container
+    * `chown www-data:www-data uploads` to be able to upload files
 
 ## Known Issues
 * Block editing in german language only
@@ -17,7 +31,7 @@ Below you will find some information on how to run scripts.
 ## Backlog
 * Make more things configurable
     * height of slider/images
-* Create script to bundle the plugin
-* i18n
-* Move some configuration to a sidebar
+* a11y
+* i18n for block editing
+* Move configuration to a sidebar
 * Get rid of jQuery
