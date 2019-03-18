@@ -10,8 +10,9 @@
     width: 100%;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
 
-    a {
+    div {
       min-width: 100%;
       display: flex;
       flex-direction: column;
