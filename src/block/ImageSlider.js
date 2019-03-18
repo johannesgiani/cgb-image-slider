@@ -2,9 +2,9 @@
 export default function ImageSlider( { className, imageSliderProperties } ) {
     const { buttonLeftClass, buttonRightClass, imageStyles, imageUrls } = imageSliderProperties;
     const images = imageUrls.map((url) => {
-        return 	<a href={ url }>
+        return 	<div>
                     <img src={ url } style={ imageStyles }/>
-                </a>
+                </div>
         }
     );
 

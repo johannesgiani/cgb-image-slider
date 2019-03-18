@@ -8,7 +8,7 @@
             const leftButton = controlsContainer.querySelectorAll('button')[0];
             const rightButton = controlsContainer.querySelectorAll('button')[1];
 
-            const numItems = imagesContainer.querySelectorAll('a').length;
+            const numItems = imagesContainer.querySelectorAll('div').length;
 
             leftButton.addEventListener('click', onClickLeft); 
             rightButton.addEventListener('click', onClickRight); 
@@ -28,8 +28,8 @@
             }
         
             function scrollIntoView(i) {
-                const item = imagesContainer.querySelectorAll('a')[i];
-                item.scrollIntoView({ behavior: 'smooth'});
+                const item = imagesContainer.querySelectorAll('div')[i];
+                item.scrollIntoView({ behavior: 'smooth', block: 'nearest'});
             }
         
             function getCurrentItemIndex() {

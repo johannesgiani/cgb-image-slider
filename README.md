@@ -29,6 +29,8 @@ Below you will find some information on how to run scripts.
 * Block editing in german language only
 
 ## Backlog
+* add scroll-snap webkit support
+* replace `<a>` as container class for an image
 * a11y
 * i18n for block editing
 * Move configuration to a sidebar
