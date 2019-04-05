@@ -8,9 +8,15 @@
   .wp-block-cgb-block-image-slider__images {
     display: flex;
     width: 100%;
-    overflow-x: scroll;
+    overflow-x: auto;
+    scroll-snap-type: mandatory; /* Old Spec for Mozilla support */
+    scroll-snap-points-x: repeat(100%); /* Old Spec for Mozilla support */
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
 
     div {
       min-width: 100%;
