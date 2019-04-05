@@ -35,3 +35,12 @@ Below you will find some information on how to run scripts.
 * i18n for block editing
 * Move configuration to a sidebar
 * Get rid of jQuery
+* watch out for mozilla snap grid support
+
+## Changlog
+# 1.0.2
+* add some snap grip support for mozilla
+# 1.0.1
+* reduce stylings
+# 1.0.0
+* initial version
